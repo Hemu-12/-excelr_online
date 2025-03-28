@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+
+    <style>
+           #p1{
+            background-color: aliceblue;
+           }
+           /*used to select first letter of an element*/
+           #p1::first-letter{
+
+            color: red;
+            font-size: 30px;
+           }
+           /*used to select first line of an element*/
+           #p1::first-line{
+            color: rgb(85, 0, 255);
+
+           }
+          /*used to provide content after the element*/
+           #p2::after{
+            content:"😊😊";
+           }
+          /*used to provide content before the element*/
+           #p2::before{
+            content: "😁";
+           }
+           /*used to select text*/
+           #p1::selection{
+            background-color: aqua;
+           }
+           /*used for list*/
+           ::marker{
+            color: blueviolet;
+            font-size: 20px;
+
+           }
+    </style>
+</head>
+<body>
+    
+    <h1>Pseudo Element</h1>
+    <hr>
+    <p>it is used to add style to the specific part of an element </p>
+    <p>it indicates with :: (double colon)</p>
+
+    <hr>
+    <p id="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit cum voluptatem culpa rerum distinctio minus deserunt, possimus eius ipsa pariatur fuga, quia fugiat sequi nihil quasi numquam aperiam voluptatibus nemo perferendis voluptates libero natus nesciunt quos. Voluptate eos, et maxime distinctio maiores consequatur magni esse hic incidunt at optio exercitationem repellat mollitia similique perspiciatis eius odio. Voluptate voluptatibus totam at atque quaerat quidem repudiandae, tempore, velit beatae expedita id. Laborum, error minus repudiandae neque alias at tempora eveniet, aspernatur, et itaque repellendus ipsum veniam sunt ullam. Asperiores dignissimos doloremque eaque quos soluta dolorum totam necessitatibus? Reprehenderit unde fugiat omnis impedit?</p>
+    <p id="2">This is a content</p>
+
+    <ol>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ol>
+</body>
+</html>
