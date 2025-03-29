@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquee Task</title>
+
+    <style>
+        marquee{
+            border: 2px solid red;
+        }
+
+        img{
+             height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Marquee Task</h1>
+    <hr>
+
+    <p>this is a text</p>
+   <!-- default direction is left-->
+    <marquee behavior="" direction="">this is a text</marquee>
+    <marquee behavior="" direction="right">this is a text</marquee>
+    <marquee behavior="" direction="up" height="100px">this is a text</marquee>
+    <marquee behavior="" direction="down" height="100px">this is a text</marquee>
+
+<!-- default behavior is scroll -->
+    <marquee behavior="" direction="left" scrollamount="20">
+        <img src="./medias/kaustubh-chaudhary-doremon-pink.jpg" alt="">
+
+        <marquee behavior="slide" direction="left" scrollamount="20">
+            <img src="./medias/kaustubh-chaudhary-doremon-pink.jpg" alt="">
+    
+            <marquee behavior="alternate" direction="left" scrollamount="20">
+                <img src="./medias/kaustubh-chaudhary-doremon-pink.jpg" alt="">
+        
+    </marquee>
+
+     
+
+</body>
+</html>
