@@ -5,5 +5,19 @@
     "express": "^5.1.0",
     "mongoose": "^8.15.1",
     "nodemon": "^3.1.10"
+  },
+  "name": "bookcrud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.3.5"
   }
 }
