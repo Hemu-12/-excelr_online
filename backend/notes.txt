@@ -1,0 +1,1804 @@
+Java:
+-----
+    -java is a programming language
+    -java is a high level language, object oriented language,
+     class based language
+    -java is a platform independent language
+    - we can develop desktop application ,web application, mobile application etc
+
+
+History:
+-------
+    -java was developed in 1991 by  sun micro system 
+              -james gosling(green team)
+              -patrick
+              -Mike
+            
+    -java was introduced in 1995 by james gosling(father of java)
+    -in the year of 1996 they released java 1.0(jdk 1.0)
+         jdk-java development kit
+         jre-java runtime environment
+         jvm-java virtual machine
+
+jdk-it consist of jre  and development tools
+jre-it consist of jvm and set of libraries
+jvm-it consist of bytecode interpreter  , used to execute bytecode
+
+
+
+platform independent:
+---------------------
+     - it means write code once run anywhere(WORA)
+     - to execute a java file we need 
+         1.compiler:
+                   - it is a tool which converts source code into byte code
+                   - ___.java(source code) ----->____.class(bytecode)
+
+         2.interpreter:
+                   - it is a jvm which executes bytecode
+
+Note : java is a platform independent but jvm dependent
+
+java features:
+-------------
+1.platform independent
+2.object oriented:
+               1.inheritance
+               2.polymorphism
+               3.encapsulation
+               4.abstraction
+3.java is simple and easy to learn
+4.java is secure :
+               -no pointers, which eliminate the need for memory management
+               -java has a inbuilt security manager which prevents
+                 unauthorized access to the system
+5.java is robust:
+                 -strong management of memory
+                 -it has a garbage collector which deletes
+                  unused objects
+6.java is multi threaded
+                - supports multi threading, allowing you to run 
+                 multiple tasks at the same time
+7.java is dynamic language and case sensitive
+8.java has rich standard library
+------------------------------------------------------------------------
+
+java structure:
+---------------
+
+   class className{
+    
+    public static void main(String[]args){
+        ------
+        ------
+        ------
+        }
+    }
+
+Note : main method is the entry point of java program
+       without main method java program will not run but we can compile
+         
+-----------------------------------------------------------------------------
+Tokens :
+      - tokens are the basic building blocks of a java program
+      - tokens are used to define the structure of a java program
+      - tokens are the elements of a java program 
+      - types :
+              1.keywords
+              ++++++++++
+                        :inbuilt words and reserved words
+                        :all keywords are in lowercase
+                    ex: public static void if else for while switch case 
+
+              2.identifiers
+              +++++++++++++
+                       : names providing by programmer or developer
+                       
+                Rules:(mandatory)
+                       : keywords cannot be used as identifiers
+                       : identifiers are not start with digits and 
+                         special characters except $ and _
+                Conventions:(optional but recommended)
+                       : identifiers should be in camel case
+                       ex: firstNameProgram
+                       : for class/interface name use pascal case
+                       ex: FirstNameProgram
+                       : for method and variable name use snake case/camel case
+                       ex: first_name
+
+              3.literals
+              +++++++++++
+                        : literal is a value/data assigned to a variable
+
+                ex:    int        valueName        =        10
+                     datatype    identifier   assigning   value/literal
+
+Data types:
+           1.primitive data types
+
+                      Number
+                        |
+        ------------------------------------
+        |                                  |
+        Integer                        Decimal
+        |                                  |
+        -----------------------      ----------------   
+    |      |        |         |      |              |                     
+   byte   short    int       long    float        double 
+
+              datatype         size             range
+                1.byte  - 1 byte - 8 bits    -128 to 127
+                2.short - 2 bytes - 16 bits  -32768 to 32767
+                3.int   - 4 bytes - 32 bits  -2147483648 to 2147483647
+                4.long  - 8 bytes - 64 bits  -9223372036854775808 to 9223372036854775807
+                5.float - 4 bytes - 32 bits  -3.4E38 to 3.4E38
+                6.double- 8 bytes - 64 bits  -1.7E308 to 1.7E308
+                7.char  - 2 bytes - 16 bits  -32768 to 32767
+                8.boolean - 1 byte - 8 bits  -true or false
+           2.non primitive data types
+                1.string
+                2.array
+                3.object
+                4.wrapper classes
+                5.enum
+                6.annotation
+                7.Collections
+-----------------------------------------------------------------------------
+variables:
+-----------
+        - variables are used to store data/ values
+
+      based on datatype:  
+        - if we storing primitive datatype then it is called primitive variable
+            int a=10;   (a- primitive variable)
+        - if we storing non primitive datatype then it is called non primitive variable
+            String b="hello";  (b- non primitive variable)
+
+      based on scope:
+        - if we storing variable inside method/constructor then it is called local variable
+         Note : local variable can be accessed only inside method/constructor but not outside
+        - if we storing variable inside class and outside method then it is called global variable
+         Note : global variable can be accessed inside and outside method
+                global variables are two types:   
+                     1.static variable
+                     2.instance/non static variable
+
+
+variable declaration:
+             -providing name to a variable
+ex: int a;
+variable initialization: 
+              -assigning a value to a variable
+ex:  a=10;    ex2: int b=30;
+variable reinitialization:
+              -reassigning a value to a variable
+              (removing old value and adding new value)
+ex: int a=20;    
+        a=30;
+
+Note : local variable can be used after it is initialized
+       global variable can be used before it is initialized and it gives
+       default value according to datatype
+
+              4.operators:
+              +++++++++++
+                       1.arithmetic operators  
+                               ---> + - * / %  (binary operator)
+                       2.relational operators  
+                               ---> < > <= >= == != (binary operator)
+                       3.logical operators     
+                               ---> && || (binary operator) !(unary operator)
+                       4.assignment operators  
+                              ---> = += -= *= /= %= (binary operator)
+                       5.bitwise operators     
+                              ---> & | ^ ~ << >> (binary operator)
+                       6.conditional operators 
+                              ---> (operand1?operand2:operand3) (ternary operator)
+                       7.increment/decrement operators
+                              ---> ++ -- (unary operator)
+                       8.access operator (.) -unary operator
+
+Precedence / priority of operators:   
+              1.()
+              2.unary operators
+              3.multiplication/division
+              4.addition/subtraction
+              5.relational operators
+              6.equality operators
+              7.logical  and operator
+              8.logical or operator
+              9.ternary operator
+
+              5.separators
+              ++++++++++++
+                       1.comma
+                       2.semicolon
+                       3.curly brackets
+                       4.parenthesis
+
+
+Note : tokens are case sensitive
+-----------------------------------------------------------------------------
+creating java project in eclipse:
+
+        clt+N---->choose java project in wizard----->next
+        provide projectName ---->next---->finish 
+
+package: 
+       - it is a folder which contains java classes and interface.
+       - a file must be unique in a package.
+library (jar file):
+       - it consist collection of packages
+jre system library:
+       - it consist collection of jar files(libraries)
+------------------------------------------------------------------------------------
+
+Casting :
+        -converting one data type to another data type
+        -there are two types of casting:
+            1.primitive type casting
+                   - convert one primitive data type to another primitive data type
+                   -1.implicit casting : it is done automatically by the compiler
+                   -2.explicit casting : it is done manually by the developer ,
+                                         so need to use cast operator ()
+-------------------------------------------------------------------------------------
+                                    implicit                         explicit
+-------------------------------------------------------------------------------------
+also known as                      widening  typecasting        narrowing typecasting
+conversion                         small to big                 big to small 
+cast operator                      optional                     mandatory
+loss of data                       no                           yes
+example                            byte-->double                double------>byte 
+-------------------------------------------------------------------------------------
+order of data types:
+  byte (8 bits)<short(16 bits)
+                               <int (32 bits)<long (64 bits)<float (32 bits)<double(64 bits)
+               <char(16 bits)
+   
+
+            2.Non primitive type casting
+------------------------------------------------------------------------------------
+Statements :
+    1.Conditional Statements:
+    --------------------------
+             - statements(block of code) will execute based on condition
+             Types :
+                 1.if statement
+                        syntax:
+                        if(condition){
+                            // if condition satisfy block of code will execute
+                        }
+                 2.if-else statement
+                        syntax:
+                        if(condition){
+                            // if condition satisfy block of code will execute
+                        }else{
+                            // if condition not satisfy block of code will execute
+                        }
+                 3.if-else-if ladder
+                    syntax:
+                    if(condition){
+                        // if condition satisfy block of code will execute
+                    }
+                    else if(condition){
+                        // if condition satisfy block of code will execute
+                    }
+                    .
+                    .
+                    else{
+                        // if all conditions not satisfy block of code will execute
+                    }
+                 4.switch statement
+                    syntax:
+
+                    switch(expression/value/variable/constant/){
+                         case value1:{
+                            // if value matches  block of code will execute  
+                         } break;
+                         case value2:{
+                            // if value matches block of code will execute
+                         }break;
+                         .
+                         .
+                         case valueN:{
+                            // if value matches block of code will execute
+                         }break;
+                         default:{
+                            // if all cases not matches block of code will execute
+                         }break;
+                    }
+
+Note : 1.break statement is used to terminate the flow(optional)
+       2.default statement is used to execute block of code when all 
+          cases not matches(optional)
+       3.cases must be unique and must be in ascending order
+       4.switch will accept only int ,byte,short,char and string and enums
+
+
+
+                 5.Nested if statement
+                   syntax:
+                   if(condition){
+                     if(condition){
+                            ...
+                     }
+                   }
+
+
+    2.Looping Statements
+    --------------------
+             - statements(block of code) will execute multiple times based on condition
+             Types:
+              1.while loop
+                  syntax:
+                  while(condition){
+                      // block of code will execute
+                  }
+
+              2.do-while loop
+                  syntax:
+                  do{
+                      // block of code will execute
+                  }while(condition);
+
+---------------------------------------------------------------------------------------
+                            while                                     do-while
+           ----------------------------------------------------------------------------
+no of iterations            0                                            1
+reason                   it will check the condition,     it will execute the code 
+                         if condition satisfy,            without checking the condition
+                         block of code will execute       for the first time.
+           ------------------------------------------------------------------------------       
+
+              3.for loop:
+             
+             syntax:
+             for(initialization;condition;updation){
+                 //code will execute 
+             }
+                
+Note: initialization, condition and updation are optional
+      
+       //initialization
+       for(;;){
+        //condition
+        //updation
+       }
+
+
+
+              4.for-each loop(advanced for loop)
+              syntax:
+              for(datatype variableName:arrayName){
+                  //code will execute
+              }
+
+          -------------------------------------------------------------
+          for                                      foreach
+    --------------------------------------------------------------
+    initialization,condition,updation
+     is required                               is not required 
+     performed only slow                       performed fast 
+    ---------------------------------------------------------------
+        
+              5.nested loop:loop inside another loop
+
+  3.Other Statements:
+  -------------------
+             1.input statements:
+                   Scanner sc=new Scanner(System.in);
+                   byte a=sc.nextByte();
+                   short b=sc.nextShort();
+                   int c=sc.nextInt();
+                   long d=sc.nextLong();
+                   float e=sc.nextFloat();
+                   double f=sc.nextDouble();
+                   char g=sc.next().charAt(0);
+                   String s=sc.next();
+                   boolean h=sc.nextBoolean();
+             2.Output statements:
+                   System.out.println(); -it will print the value 
+                                         and move the cursor to next line
+                                         -empty value is also accepted
+                   System.out.print(); -it will print the value and 
+                                        not move the cursor to next line
+                                        -empty value will not accepted
+                  ex: System.out.println();//CTS
+                      System.out.print();//CTE
+            3.break statement:
+                   it is used to terminate the flow
+                   ex: break;
+            4.continue statement:
+                   it is used to skip the current iteration and continue the flow
+                   ex: continue;
+
+                    
+
+
+
+------------------------------------------------------------------------- 
+Arrays : 
+        -arrays are used to store multiple values in a single variable
+        ex: int []arr={1,2,3,4};
+        -arrays will store same data type values
+        ex: int []arr={1,2,3,4};
+            String []arr={"a","b","c","d"};
+        -arrays are fixed in size;
+        -non primitive data types.
+    1.Creation of Arrays:
+        -declaring an array
+        -initializing an array
+      ex: int []arr={1,2,3,4}; //declaring and initializing an array
+          int []arr=new int[5]; //declaring and providing a size
+          int []arr=new int[]{1,2,3,4}; //declaring and initializing an array
+          int []arr=new int[5]{1,2,3,4,5}; //declaring and providing a size
+
+    2.Accessing Arrays:
+        -accessing through index position
+        -accessing through for loop or for each loop
+
+Arrays class Methods:
+   -Arrays is a class present in java.util package
+   -it consist n number of static methods.
+
+   1.Arrays.toString(): used to print the values of an array
+       syntax:
+       System.out.println(Arrays.toString(arr));
+
+   2.Arrays.sort(): used to sort the values of an array
+      syntax:
+      Arrays.sort(arr); //ascending order
+      Arrays.sort(arr,Collections.reverseOrder());//descending order
+
+   3.Arrays.equals(): used to compare two arrays and returns true if 
+                     they are equal or  returns false
+      syntax:
+      boolean b=Arrays.equals(arr1,arr2);
+    
+    4.Arrays.mismatch(): used to compare two arrays and if it is same
+                         it returns the index of first element or else
+                         it returns -1
+      syntax:
+      int index=Arrays.mismatch(arr1,arr2); 
+    5.Arrays.binarySearch(): used to search an element in an array,
+                            if element is present it returns the index
+                            of that element or else it returns negative number
+        Note: it is applicable only for sorted arrays 
+      syntax:
+      int index=Arrays.binarySearch(arr,element);
+     6.Arrays.copyOfRange(): used to create a copy of an array based on copyOfRange
+        syntax:
+        int []arr1=Arrays.copyOf(arr,startingIndex,endingIndex-excluding);    
+                    
+
+Multidimensional Arrays:
+           -array of arrays
+           -declaring and initializing a multidimensional array
+        
+        int [][]arr={{1,2,3},{4,5,6},{7,8,9}}; // 2D array
+        int [][]arr=new int[3][3]; //declaring and providing a size
+
+        int [][]arr={{1,2,3},{4,5},{5,6,7,8}}// jagged arrays
+         // different rows have different number of columns
+
+  Arrays.deepToString(): used to print the values of a multidimensional array
+----------------------------------------------------------------------------------
+
+String :
+        -String is a class present in java.lang package
+        -it is used to store a sequence of characters
+        -it is immutable
+        -it is a non primitive data type
+    
+    creation of String :
+             1.with string literal
+             2.with string constructor
+
+        1.with string literal:
+            String s1="hello"; //it will create in constant pool area/string constant area
+            String s2="hello";
+            System.out.println(s1==s2);//true 
+
+        2.with string constructor:
+            String s2=new String("hello"); //it will create in heap area
+            String s3=new String("hello");
+            System.out.println(s2==s3);//false
+
+String methods:
+            1.length(): used to get the length of a string
+            2.charAt(index position): used to get the character at a particular index position ,
+                                    if index is out of range then it will throw 
+                                    an exception(StringIndexOutOfBoundsException)
+
+            3.substring(stating index,ending index): used to get a substring/part of a string
+            4.toCharArray(): used to convert a string to an array of characters
+            5.indexOf('a'): used to get the  first index of a character in a string,
+                           if character is not present then it will return -1
+            6.lastIndexOf('a'): used to get the last index of a character in a string,
+                           if character is not present then it will return -1
+            7.contains("abc"): used to check if a string contains a substring,if 
+                              it is present then it will return true or else it will return false
+            8.startsWith("abc"): used to check if a string starts with a substring,if 
+                              it is present then it will return true or else it will return false
+            9.endsWith("abc"): used to check if a string ends with a substring,if 
+                              it is present then it will return true or else it will return false
+            10.toUpperCase(): used to convert a string to uppercase
+            11.toLowerCase(): used to convert a string to lowercase
+            12.trim(): used to remove the leading and trailing spaces from a string
+            13.split(" "): used to split a string into an array of substrings based 
+                          on a delimiter
+            14.equals("abc"): used to check if a string is equal to another string, if 
+                             it is equal then it will return true or else it will return false
+            15.equalsIgnoreCase("abc"): used to check if a string is equal to another string
+                                        ignoring the case, if it is equal then it will return true
+                                        or else it will return false
+            16.matches("abc"): used to check if a string matches a regular expression, if
+                              it matches then it will return true or else it will return false
+            17.compareTo("abc"): used to compare two strings,
+                                if they are equal then it will return 0,
+                                if first string is less than second string then it will return -1,
+                                if first string is greater than second string then it will return 1
+                             
+
+limitations of String :
+           - Strings are immutable in java , so  if we modify (add,delete,replace)
+             a string then a new string will be created and the old string will be
+             garbage collected
+          - so, we use string builder and string buffer to modify a string
+ 
+------------------------------------------------------------------------------------
+                  String             StringBuffer               StringBuilder
+    -------------------------------------------------------------------------------
+mutability       immutable           mutable                    mutable
+thread safe      not applicable      applicable                 not applicable
+performance      slow                fast                       fast
+use case         general purpose     multi-thread              single-thread 
+
+----------------------------------------------------------------------------------
+Methods in StringBuffer and StringBuilder:
+          -both are classes present in java.lang package
+          -they are used to modify a string
+          -they are thread safe (StringBuffer) and (StringBuilder) are not thread safe
+ 
+ 1.append(): used to add a character or a string at the end of a string
+ 2.insert(): used to insert a character or a string at a particular index position
+        syntax:
+        sb.insert(index,character);
+        sb.insert(index,string);
+ 3.replace(): used to replace a character or a string at a particular index position
+        syntax:
+        sb.replace(start,end,character);
+        sb.replace(start,end,string);
+4.delete(): used to delete a character or a string at a particular index position
+        syntax:
+        sb.delete(start,end);
+5.deleteCharAt(): used to delete a character at a particular index position
+        syntax:
+        sb.deleteCharAt(index);
+6.reverse(): used to reverse a string
+        syntax:
+        sb.reverse();
+7.length(): used to get the length of a string
+        syntax:
+        sb.length();
+8.setLength(): used to set the length of a string
+        syntax:
+        sb.setLength(length);
+9.substring(): used to get a substring/part of a string
+        syntax:
+        sb.substring(start,end);
+10.toString(): used to convert a string to a string buffer
+        syntax:
+        sb.toString();
+11.charAt(): used to get the character at a particular index position
+        syntax:
+        sb.charAt(index);
+12.setCharAt(): used to set the character at a particular index position
+        syntax:
+        sb.setCharAt(index,character);
+12.indexOf(): used to get the first index of a character in a string
+        syntax:
+        sb.indexOf(character);
+13.lastIndexOf(): used to get the last index of a character in a string
+15.capacity(): used to get the capacity of a string buffer
+        syntax:
+        sb.capacity();
+16.ensureCapacity(): used to ensure the capacity of a string buffer
+        syntax:
+        sb.ensureCapacity(capacity);    
+
+------------------------------------------------------------------------------------------
+Methods :
+      - it is a block of code that performs a specific task
+      - methods should be enclosed in {}
+      - methods should be declared inside a class or interface or abstract class
+      - methods can invoke/call with the help of method name or method signature
+      - used to reuse the code, increases the reusability, readability of the code
+
+Note : without calling a method ,it will not run
+     : calling method is called method invocation/ method calling statement 
+
+syntax: 
+access modifier  specifier return_type method_name(parameters){
+    
+    ----
+    ----
+    return statement;
+}
+
+method signature: methodName+ parameters/arguments
+method declaration: access modifier+specifier+return_type+method_name+parameters
+method definition: method declaration+body
+
+
+Methods are two types based on arguments:
+----------------------------------------
+1. no-argument methods/zero-argument methods/non parameterized methods
+                ex:
+                public static void m1() {
+                    
+                }
+                m1();//method invocation
+2. argument methods/parameterized methods
+                ex:
+                public static void m1(int a) {
+                    
+                }
+                m1(10);//method invocation
+    
+    -----------------------------------------------------------------------------
+     actual arguments                                formal arguments
+    ------------------------------------------------------------------------------
+parameters passed to a method                        parameters declared in a method
+value/literal/expression                             datatype variableName
+    ------------------------------------------------------------------------------
+
+
+Methods are two types based on return type:
+--------------------------------------------
+1.void methods/non returned methods
+      - method does not return any value to the caller
+      - return type is void
+      - return statement is not mandatory(optional)
+2.non void methods/returned methods
+      - method returns a value/data to the caller
+      - return type is not void(primitive or non primitive)
+      - return statement is mandatory
+
+Note : return is a keyword 
+       return statement is used to return a value/data to the caller
+       return statement is used to terminate a method
+       return statement must be the last statement in a method
+       more than one return statement is not allowed in a method
+
+
+Method Overloading:
+++++++++++++++++++
+ - multiple methods with same name but different parameters or formal arguments in same class or interface
+is called method overloading
+ - method overloading is used to increase the reusability of code
+
+ Note : number of parameters should be different
+        datatype of parameters should be different
+        order of parameters should be different
+---------------------------------------------------------------------------------------
+
+Class:
+++++++
+    - class is a blue print of an object or a real world entity
+    - class is used to create objects
+    - it consist of variables and methods
+    - it is a collection of related data and functions
+    - class is created by using class keyword
+    - class is a non primitive data type
+
+ex: Bike:  
+     action/method/function :riding(), start(), stop()
+     variable/properties/data :name, color, price
+    
+Object :
+        - object is a real world entity
+        - object is created by using new keyword and class constructor;
+        - object is created in heap memory
+    
+    syntax : 
+    class ClassName{
+        //variables and methods
+    }
+
+    ClassName obj=new ClassName();
+
+Note : static members can call by using Class name
+       Non static members can call by using object reference variable
+
+
+OOPS (Object Oriented Programming):
++++++++++++++++++++++++++++++++++
+      1.Encapsulation
+      2.Abstraction
+      3.Inheritance
+      4.Polymorphism
+
+Encapsulation:
+++++++++++++++++
+- it is a process of wrapping/binding the data(variables) and methods
+  into a single unit is called encapsulation
+- we can achieve data hiding and data security
+- hiding the internal state of an object from the outside world(by using access modifiers-private)
+- providing access with the help of getter and setter methods
+
+Note : getter and setter methods are used to access private variables
+       getter are used to get/access/retrieve the value of private variable
+       setter are used to set/assign/write the value of private variable
+
+-----------------------------------------------------------------------------
+Abstraction:
+++++++++++++
+       -The process of hiding implementation  and showing only the
+        functionality to the user is called abstraction
+       - we can achieve abstraction by using abstract classes and interfaces
+
+abstract class:
+--------------
+        - class can be declared as abstract by using abstract keyword
+        - abstract class cannot be instantiated/can't create object ,
+          because it is abstract/incomplete
+        - we can have (abstract methods , concrete methods)non static and static methods
+        - we can have non static and static variables
+        - we can have constructor for reinitialization of non static variables,
+          not for object creation
+        - static and final methods cant be abstract methods
+
+interface:
+-----------
+     - interface can be create with interface keyword
+     - to achieve multiple inheritance and 100% abstraction
+     - it will allows only abstract methods and constants
+       (public static final data member) until java 8
+     - it wont allow constructor because all the data members
+       are static and final by default
+     - from java 8 , it allows static method and default methods
+
+
+Non primitive typecasting:
++++++++++++++++++++++++++
+       -converting one non primitive data type to another non primitive data type
+       -there are two types of casting:
+            1.implicit casting : 
+                   - it is done automatically by the compiler
+                   - converting child data type to parent data type
+                   - can also called as widening typecasting(upcasting)
+            2.explicit casting : it is done manually by the programmer
+                  - it is done manually by the developer need to use cast operator ()
+                  - converting parent data type to child data type
+                  - can also called as narrowing typecasting(downcasting)
+
+
+
+
+
+
+
+Inheritance:
++++++++++++
+       -The process of inheriting properties and methods from a parent class
+       to a child class is called inheritance
+       -we can achieve inheritance by using extends and implements keyword
+            class A{
+            //parent 
+            }
+
+            class B extends A{
+            //child
+            }
+
+ extends: is a keyword used to achieve inheritance in java 
+          Child class--(extends)----->Parent class
+          Child class----(extends)--->abstract Parent class
+          abstract Child class----(extends)--->Parent class  
+
+implements : is a keyword used to achieve inheritance in java
+            class ---(implements)------>interface
+            interface----(extends)------>interface
+
+
+ parent             interface                     class/abstract class
+                        |                                 |
+                        | (achievable by implements)      |(cant achieve  )
+ child           class/abstarct class                 interface
+
+
+       Types:
+            1.single level inheritance:
+                - a class can inherit properties and methods from only
+                  one parent class to a child class
+            2.multilevel inheritance
+                - a class can inherit properties and methods from more
+                  than one parent class
+            3.hierarchical inheritance
+                 - a class can inherit properties and methods from one parent
+                   to multiple child classes
+            4.multiple inheritance 
+                - a child  inheriting properties and methods from more than one parent
+                - multiple inheritance is not allowed in java by using class
+                - it can be achieved by using interfaces
+
+Diamond Problem/Ambiguity Problem:
+++++++++++++++++++++++++++++++++++
+     when we try to perform multiple inheritance in java using class, child class
+     try to call parent class constructor and try to  override parental method
+     which causes ambiguity problem and diamond problem  
+
+            5.hybrid inheritance
+                - hybrid inheritance is a combination of multiple
+                  and hierarchical inheritance
+---------------------------------------------------------------------------
+constructor:
+++++++++++++
+           - constructor is a special method
+           - constructor is used to create the object/instance
+           - constructor is called automatically when an object is created
+           - constructor is used to assign values to non static variables
+           - constructor name should be same as class name
+           - constructor doesn't have return type
+    Types:
+          1.default constructor
+                         - no arguments constructor created by java compiler by default
+          2.user defined constructor
+                         - constructor created by user/developer/programmer
+                         1.parameterized constructor/argument constructor
+                         2.non-argument constructor/non- parameterized constructor
+
+Note : if we create an user defined constructor then default constructor 
+       will not be created by java compiler
+
+
+constructor overloading:
++++++++++++++++++++++++
+            -having multiple constructors with different parameters(formal arguments)
+             in same class is  called constructor overloading
+
+rules:
+      1. constructor name should be same as class name
+      2. different number of parameters
+      3. different type of parameters
+      4. different order of parameters
+
+constructor chaining:
+++++++++++++++++++++
+           - the process of calling one constructor from another constructor
+             is called constructor chaining
+           - used to assign values to non static variables from another constructor
+           - helps to avoid duplicate code(code duplication)
+           - can achieve with the help of this() and super() statements
+           -this() - this call statement is used to call current constructor
+           -super() - super call statement is used to call parent class constructor
+
+Note : 1.this() or super () must be the first statement in a constructor
+       2.both statements can't be used together in a constructor
+    
+method overriding:
+++++++++++++++++++
+            - The process of changing the implementation of a parent class method
+              in a child class
+            - overriding is used to achieve run time polymorphism
+            - inheritance is mandatory for method overriding
+Note :
+     method signature should be same in parent class and child class
+     method return type should be same in parent class and child class
+     **final methods can't be overridden
+
+---------------------------------------------------------------------------------------
+method overloading                                        method overriding
+-----------------------------------------------------------------------------------
+multiple methods with same name                          changing the implementation
+ but different parameters                                of parent class method
+
+inheritance is not mandatory                             inheritance is mandatory
+
+compile time binding                                      run time binding
+-----------------------------------------------------------------------------------
+Object class
+++++++++++++
+         - Object class is an inbuilt class present in java.lang package from 1.0 version
+         - Object class is a parent/super/base/root class of all classes
+         - it consist 11 methods
+methods:
+-------
+1. toString()->returns a string representation of the object
+             - to print object values rather than object address/reference
+2. hashCode()->returns a hash code value for the object
+3. equals()->returns true if the specified object is equal to this object
+4. getClass()->returns the class of the object
+5. clone()->returns a copy of the object
+6. finalize()->called when the object is no longer reachable
+7. notify()->wakes up a single thread that is waiting on this object's monitor
+8. notifyAll()->wakes up all threads that are waiting on this object's monitor
+9. wait()->causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method for this object
+10. wait(long timeout)->causes the current thread to wait until either another thread invokes the notify() method or the notifyAll() method for this object, or the specified amount of time has elapsed
+11. wait(long timeout, int nanos)->causes the current thread to wait until either another thread invokes the notify() method or the notifyAll() method for this object, or the specified amount of time has elapsed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Polymorphism:(many/ multiple forms)
+++++++++++++
+    -the process of having many forms is called polymorphism
+    -it is used to achieve run time polymorphism and compile
+     time polymorphism
+    Run time polymorphism:
+    ---------------------
+               - method overriding
+    Compile time polymorphism:
+    -------------------------
+               - method overloading
+               - constructor overloading
+-------------------------------------------------------------------------------------------------------------------
+   
+     
+
+----------------------------------------------------------------------------------------------------------------------
+Online Course management/platform:
+++++++++++++++++++++++++++++++++
+    
+blueprint/class:  1.User class
+                  2.Student class
+                  3.Faculty class
+                  4.Course class etc
+Encapsulation: binding data and method  together in a class
+    ex: class User{
+        private int userId;
+        private String userName;
+        private String password;
+        //getter and setter methods
+    } 
+
+Abstraction and Inheritance :
+              we can make User class as abstract class,
+              Student and Faculty as child classes of User class 
+              for providing implementation
+
+Polymorphism : attending class by teacher and student
+          abstract  class User{   
+            attendingClass(); 
+          }  
+
+          class Student extends User{
+            takingClasses(){
+                system.out.println("Student attending classes");
+            }
+          }
+
+          class Faculty extends User{
+            teachingClasses(){
+                system.out.println("Faculty teaching classes");
+            }
+          }
+
+---------------------------------------------------------------------------------------------------------------------
+Modifiers:(specifiers- c language)
+++++++++++++
+         - modifiers are keywords
+         - used to modify the visibility of class members
+         - used to modify the accessibility of class members
+         - used to provide additional information about class members
+    Types:
+       1.access modifiers
+       2.non access modifiers
+
+1.Access modifiers:
+------------------
+      - it is used to modify the accessibility and visibility of class members
+      1.public ---public keyword
+      2.private --- private keyword
+      3.protected--- protected keyword
+      4.default---no keyword
+
+---------------------------------------------------------------------------------------
+                        public         protected             default            private
+---------------------------------------------------------------------------------------
+in same class             yes          yes                  yes                yes
+
+in same package           yes          yes                  yes                no
+but in different class                    
+
+in different package      yes          yes                  no                 no
+with sub class
+
+in different package      yes          no                   no                 no
+---------------------------------------------------------------------------------------
+
+2.Non access modifiers:
+-----------------------
+        - it is used to provide additional information about class members
+
+1.static: 
+           - it is a keyword
+           - it belongs to class not object
+           - it will load members in memory only once(static area of memory) 
+  static:
+    In same class :
+            1. can call directly by using refName/method() in static method and non static method
+            2. can call with className.refName / className.method() in static and non static method
+    In different class:
+             -can call with  className.refName / className.method()
+
+  non static:
+     In same class:
+            1.can call directly by using refName/method() in non static method 
+            2.can call with objRef.refName / objRef.method() in static method
+     In different class:
+            - can call with objRef.refName / objRef.method()      
+2.final: 
+    - it is a keyword
+    - final dataMember /variable /field can't be changed/re assigned
+      need to initialize during declaration
+    - final method can't be abstract and can't be overridden
+    - final class can't be abstract and can't be inherited 
+    
+3.abstract
+     -it is a keyword
+     -use for methods and class to make it as abstract
+     -abstract class can't be instantiated and can't be final
+     -abstract method need to override in child class and can't be final
+
+4.synchronized
+5.native
+6.strictfp
+7.volatile
+8.transient etc
+-------------------------------------------------------------------------------------------------------------
+
+Wrapper class:
++++++++++++++
+    -it is a class(present in java.lang package)
+    -it is used to convert primitive data types to object data types
+    -it is used to convert object data types to primitive data types
+    -and we can achieve 100% oops
+    -A class which is wrapping a primitive data type is called wrapper class 
+  
+  primitive data types                      Object class(wrapper class/non primitive data types)
+  ------------------------------------------------------------------
+       byte                                     Byte
+       short                                    Short
+       int                                      Integer
+       long                                     Long
+       float                                    Float
+       double                                   Double
+       char                                     Character
+       boolean                                  Boolean
+      
+
+converting primitive data types to object data types:
+---------------------------------------------------
+1. AutoBoxing: automatic conversion of primitive data types to object data types
+        WrapperClass refName=value;
+2. Boxing: manual conversion of primitive data types to object data types
+       WrapperClass refName=WrapperClass.valueOf(value);
+       ex:
+       Byte b=Byte.valueOf(10);
+       Short s=Short.valueOf(10);
+       Integer i=Integer.valueOf(10);
+       Long l=Long.valueOf(10);
+       Float f=Float.valueOf(10);
+       Double d=Double.valueOf(10);
+       Character c=Character.valueOf('A');
+       Boolean b1=Boolean.valueOf(true);
+
+
+converting object data types to primitive data types:
+---------------------------------------------------
+1.AutoUnBoxing: automatic conversion of object data types to primitive data types
+        primitiveDataType refName=value;
+2.UnBoxing: manual conversion of object data types to primitive data types
+       primitiveDataType refName=WrapperClassRefName.intValue();
+
+       ex:
+       byte b=b1.byteValue();
+       short s=s1.shortValue();
+       int i=i1.intValue();
+       long l=l1.longValue();
+       float f=f1.floatValue();
+       double d=d1.doubleValue();
+       char c=c1.charValue();
+       boolean b1=b1.booleanValue();
+
+Parsing
+--------
+    - it is used to convert string to primitive data types
+ex:
+    byte b=Byte.parseByte("10");
+    short s=Short.parseShort("10");
+    int i=Integer.parseInt("10");
+    long l=Long.parseLong("10");
+    float f=Float.parseFloat("10.5");
+    double d=Double.parseDouble("10.5");
+    char c=Character.parseChar("A");
+    boolean b1=Boolean.parseBoolean("true");
+    ---------------------------------------------------------------------------------------------------------------
+initializer:
+-----------
+   -block of code
+   -it doesn't have name , return type and access modifier
+   Types:
+   1.static initializer
+   2.non static initializer
+
+static initializer:
+-------------------
+    -it is used to initialize static data members
+    -it is executed only once when class is loaded in memory(static area of memory)
+    -it is called before main method
+
+    syntax:
+    static{
+      //block of code
+    }
+
+non static initializer:
+----------------------
+    -it is used to initialize non static data members
+    -it is executed when object is created (heap area)
+    -it is called before constructor
+
+    syntax:
+    {
+      //block of code
+    }
+
+----------------------------------------------------------------------
+Exception:
+---------
+   - it is an event that occurs during the execution of a program
+   - it disrupts the normal flow of the program
+   - It is a class present in java.lang package
+   Types:
+    1.checked exception
+    2.unchecked exception
+1.Checked Exception:(compiler aware exception)
+        -compiler checks the exception at compile time
+        -it is checked and handled  at compile time
+      ex: IOException, SQLException, 
+          FileNotFoundException,ClassNotFoundException etc
+
+2.Unchecked Exception:(compiler unaware exception)
+       -compiler checks the exception at run time
+       -it is not checked and handled at compile time
+    ex: ArithmeticException, ArrayIndexOutOfBoundException,
+        NullPointerException, NumberFormatException etc
+
+
+How to handle exception?
+------------------------
+1.try , catch and finally block
+2.throws keyword
+
+1.try , catch and finally block:
+--------------------------------
+   -try, catch, finally are keywords
+   -In try block will have problematic code/statements
+   -In catch block will have exception handling code/statements
+   -In finally block will have clean up code/statements
+
+Note : 1.without catch block we can't handle exception
+       1.without catch or finally try block will not write/complete
+
+scenarios:
+ 1.   try{
+
+    } 
+    catch(Exception e){
+      
+    }
+    
+2. try{
+
+    }
+    catch(Exception e){
+      
+    }
+    finally{
+      
+    }
+
+3. try{
+  
+  }
+  catch(IndexOutOfBoundsException e){
+    
+  }
+  catch(ArithmeticException e){
+    
+  }
+  catch(Exception e){
+    
+  }
+
+
+4. try{
+       try{
+
+       }
+       catch(Exception e){
+         
+       }
+  }
+  catch(Exception e){
+    
+  }
+ 
+ 2.throws :
+ ----------
+     - throws is a keyword
+     - it is used to declare exception in method signature
+     - it helps to throw exception from method to caller
+     - it makes the code more readable and maintainable
+
+ex: void m1()throws Exception{
+
+   }
+
+
+
+Exception Propagation:
+----------------------
+   -the process of passing exception from one method to another 
+   method is called exception propagation
+   -to achieve exception propagation we can use throws keyword
+   -to avoid exception propagation we can use try , catch and finally block
+
+Custom Exception:
+----------------
+   -it is a user defined exception
+   -the class must be child of Exception class
+    (any class of throwable hierarchy)
+   -if it is required , we can override methods of Exception class 
+
+throw                                  throws
+-------------------------------------------------------------------
+is used to throw exception     is used to declare exception in method signature
+
+inside a block                    in method signature
+---------------------------------------------------------------------------
+thread:(task)
+-------
+   -it is a light weight process
+   -it is a smallest unit of execution
+   -it is a collection of instructions
+   -it is a collection of stack frames
+
+                    MultiTasking
+                        |
+                        |
+          ---------------------------------------
+          |                                      |
+    process based multitasking   thread based multitasking
+
+process based multitasking:
+--------------------------
+        - executing several tasks at the same time simultaneously 
+          where each task is independent of other task
+  
+  ex: In hotel ---multiple chefs --
+             chef---1task
+             chef---1task
+
+thread based multitasking:
+-------------------------
+             - executing several/multiple tasks at the same time simultaneously 
+               where each task is dependent on other task
+  ex: In hotel ---multiple chefs --
+         1chef---cutting vegetables
+              ----cooking
+              ----serving
+
+Note: multiple threads belongs to a single process, but a process is 
+      not just a collection of threads
+
+
+How to create a thread?
+----------------------
+            1.Thread class
+            2.Runnable interface
+
+1.Thread class:
+++++++++++++++++ 
+         by extending Thread class we can create a thread(user defined thread)
+         syntax:
+         class MyThread extends Thread{
+           
+         }
+
+2.Runnable interface:
++++++++++++++++++++
+         by implementing Runnable interface we can create a thread(user defined thread)
+         syntax:
+         class MyThread implements Runnable{
+           public void run(){
+             //code
+           }
+         }
+
+
+Thread Life Cycle:
+------------------
+            1.New state -> thread is created(user defined thread) - heap area
+               syntax: Thread t=new Thread();
+            2.Runnable state --> thread is ready to execute , but waiting  for
+                                 CPU to execute
+               syntax: t.start();
+            3.Running state--> thread is executing/Running
+               syntax:  t.run();
+              Note : run() method is called by start() method automatically
+
+            4.waited/blocked state --> thread is in waiting phase/paused/ blocked state
+                                       for another thread to be complete
+                  syntax: t.wait();
+            5.Timed Waiting state -->thread is waiting for specified time to complete
+                  syntax: t.sleep();
+            6.Terminated state--> thread is completed or terminated
+                  syntax: t.stop();
+
+
+Note : 1.by using notify() or notifyAll() method we can notify a waiting thread
+       we can move thread from waiting state to running state
+
+       2.start() will create a new thread and it is responsible for the execution of run()
+-----------------------------------------------------------------------------
+
+synchronized:
+++++++++++++++
+       - it is a keyword , and non access modifier
+       - it is used to make a block synchronized
+       -synchronized blocks will ensure that only one thread can access at a time
+
+  -------------------------------------------------------------------------------
+                  with synchronized                            without synchronized
+  --------------------------------------------------------------------------------
+ safe         safe - proper thread handling          unsafe - no proper thread handling
+
+ performance       slower                            faster
+
+ output           always accurate                    may not be accurate
+ -------------------------------------------------------------------------------------
+
+
+Thread Scheduler:
+-----------------
+   - if multiple threads are waiting to execute, which thread will execute
+     1st is decided by Thread Scheduler , which is a part of jvm
+    -which algorithm or behavior is used by jvm to decide ,  which can't  be expected 
+
+    - we can provide priority to threads by using setPriority() method
+
+Thread Priority:
+----------------
+     Thread.MIN_PRIORITY-1
+     Thread.NORM_PRIORITY-5
+     Thread.MAX_PRIORITY-10
+
+ Note:Thread.NORM_PRIORITY is default priority
+
+
+
+
+Q.what will happen when we have overloading methods for run()?
+A.start() method will only check for no args run() method, so it will call 
+  no args run() method
+
+Q.What will happen if we are not overriding run() method?
+A.start() method will invoke parental run() method , so it wont print anything
+
+
+
+Getter and Setter in Thread class:
+----------------------------------
+  getter : are used to get the info about a thread
+           like getName() , getState() etc
+
+  setter : are used to set the info about a thread
+           like setName() , setState() etc
+
+constructor of Thread class:
+---------------------------
+      - Thread class consist overloading constructor used to create
+       a thread in different ways
+// default constructor
+     Thread t1=new Thread(); 
+		 System.out.println(t1);
+		 
+		 Runnable r1=new Thread(); //upCasting
+		 System.out.println(r1);
+// parameterized constructor used to create a thread with name	 
+		 Thread t2=new Thread("ThreadA"); 
+		 System.out.println(t2);
+// arg const	used to create a thread with target object (thread/runnable) 
+		 Thread t3=new Thread(r1);
+		 System.out.println(t3);
+// arg const used to create a thread with target object (thread/runnable) and name		 
+		 Thread t4=new Thread(r1,"Thread B");
+		 System.out.println(t4);
+// arg const used to create a thread with a  concise task(lambda expression) 
+		 Thread t5=new Thread(()->{
+			System.out.println("creating with lambda expression"); 
+		 });
+		 System.out.println(t5);
+
+
+methods to control execution of a thread:
+---------------------------------------
+1.start() : used to start a new thread  (NEW---->RUNNABLE)
+          : it calls run() method automatically (RUNNABLE---->RUNNING)
+
+2.run() : used to execute a thread (RUNNABLE---->RUNNING)
+        :it won't create a new thread
+
+3.sleep(long milliseconds) : used to pause a thread for specified time
+                            (RUNNING---->TIMED WAITING/BLOCKED)
+
+4.sleep(long milliseconds,int nanoseconds) : used to pause a thread for specified time
+                                             (RUNNING---->TIMED WAITING/BLOCKED)
+
+5.join() : used to wait for a thread to complete/finish
+
+6.join(long milliseconds) : used to wait for a thread to complete for specified time
+
+7.yield() : used to give a chance to other threads to execute
+
+8.interrupt() : used to interrupt a thread
+
+9.isInterrupted() : used to check whether a thread is interrupted or not
+                  : it returns true if thread is interrupted otherwise false
+
+10.stop() : used to terminate a thread forcefully (unsafe operation)
+            (RUNNING---->TERMINATED)
+
+11.wait(): used to wait for a thread to complete (RUNNING---->TIMED WAITING/BLOCKED)
+
+12.notify(): used to notify a waiting thread (TIMED WAITING/BLOCKED---->RUNNING)
+
+13.notifyAll(): used to notify all waiting threads (TIMED WAITING/BLOCKED---->RUNNING)
+
+-----------------------------------------------------------------------------------------------------------------------
+Dead Lock:
+++++++++++
+    -when two threads are waiting for each other to complete their execution
+                          or
+    -when two or more  threads are waiting for each other to release a lock
+    it is called deadlock
+    -it can be handled by using synchronized blocks
+
+ Ex: two persons are walking in a narrow road and they want to cross the road
+     by blocking each other-----both will wait forever
+
+
+DeadLock happens when:
+              1.two or more  threads hold resources(locks)
+              2.Each thread waits for other thread to complete or release task
+
+can overcome :
+           1.use a consistent locking order(recommended)
+           2.use tryLock() from ReentrantLock
+           3.avoid nested locks
+
+----------------------------------------------------------------------------------
+Daemon Thread:
+++++++++++++++
+    - the daemon thread is a thread that is automatically started 
+      by the JVM
+    - a daemon thread is a background service thread that runs continuously
+      and performs a task in the background
+    - we can make a thread as a daemon thread by using setDaemon(true) method
+    - mainly used for garbage collection , file monitoring ,background logging etc
+
+    -setDaemon() - used to make a thread as a daemon thread
+                 - default value is false , so it is not a daemon thread 
+    -a daemon thread is mainly used to perform background tasks that should not prevent 
+      the  jvm exiting , when the application is in running.
+
+    -isDaemon() - used to check whether a thread is a daemon thread or not
+ex:
+   main thread --Main worker /manager
+   daemon thread --assistant workers
+
+-----------------------------------------------------------------------------------------
+Thread Group:
++++++++++++++
+          -it is a way to group threads together/ collection of threads
+          -so that we can control them together as a single unit
+        ex: checking priority, joining threads, interrupting threads etc
+          -it can achieve by using ThreadGroup class present in java.lang package
+  
+  methods in ThreadGroup
+  ---------------------
+      list()-- used to get the list of threads in the group
+      activeCount()-- used to get the number of active threads in the group
+      activeGroupCount()-- used to get the number of active groups in the group
+      interrupt()-- used to interrupt all the threads in the group
+      destroy()-- used to destroy all the threads in the group
+      getName()-- used to get the name of the group
+      setName()-- used to set the name of the group
+---------------------------------------------------------------------------------
+Lock and ReentrantLock:
++++++++++++++++++++++
+   - both belongs to java.util.concurrent package and used
+    to handle synchronization manually
+
+Lock:
+-----
+    - it is an interface that tells about locking mechanism
+    - it consist lock() , unlock(), tryLock(), lockInterruptibly() methods
+ReentrantLock:
+-------------
+    - it is a (child/concrete)class that implements Lock interface
+
+lock(): used to acquire the lock
+unlock(): used to release the lock
+tryLock(): used to try to acquire the lock and return 
+          true if lock is acquired otherwise false
+lockInterruptibly(): used to acquire the lock and if thread
+                  is interrupted then it throws InterruptedException
+
+-----------------------------------------------------------------------
+drawback of arrays:
+-----------------
+  - arrays are collection of data /value/objects
+  - arrays are fixed in size(risk in over/under size allocation)
+  - arrays are not thread safe
+  - arrays are not synchronized
+  - arrays will accept same data type values only
+  - manipulations of arrays are slow(there are no inbuilt methods )
+  - arrays are low level and not user friendly
+    (sorting , searching , insertion , deletion , element shifting etc)
+  
+
+
+Collection Framework:
++++++++++++++++++++++
+   - it is a framework that provides collection of objects
+   - it works only for non -primitive data type/ objects
+   - A group/multiple  of individual data/objects is called collection
+   - it is introduced in java 1.2 version 
+   - In collection framework , mainly we have two(root) types of interfaces
+        1. Collection interface
+        2. Map interface
+
+Framework: 
+---------
+  -a framework is a collection/set of classes and interfaces that provides
+  a ready made solution for a particular problem
+
+
+1.collection interface:  
+-----------------------
+      - It is a interface present in java.util package since java 1.2
+      - It is a child interface of Iterable interface
+      - it consist three child interfaces
+              1.List -ArrayList, LinkedList, Vector
+              2.Set - HashSet, LinkedHashSet, TreeSet
+              3.Queue - ArrayDeque, LinkedBlockingQueue, PriorityQueue
+
+methods of collection interface:
+--------------------------------
+size()  :used to get the size of collection
+        :returns int , size of collection
+        :if collection is empty returns [] /0 
+
+add(element)  :used to add an element to collection
+              :returns boolean , if element is added returns true,
+              if element is not added returns false
+
+addAll(collection):used to add multiple elements to collection
+                  :returns boolean , if elements are added returns true,
+                  if elements are not added returns false
+remove(element):used to remove an element from collection
+                :returns boolean , if element is removed returns true,
+                if element is not removed returns false
+removeAll(collection):used to remove multiple elements from collection
+                     :returns boolean , if elements are removed returns true,
+                     if elements are not removed returns false
+
+removeIf(predicate):used to remove elements from collection
+                   :returns boolean , if elements are removed returns true,
+                   if elements are not removed returns false
+
+retainAll(collection):used to retain elements from collection
+                     :returns boolean , if elements are retained returns true,
+                     if elements are not retained returns false
+
+contains(element):used to check if an element is present in collection
+                   :returns boolean , if element is present returns true,
+                   if element is not present returns false
+containsAll(collection):used to check if all the elements are present in collection
+                       :returns boolean , if all the elements are present returns true,
+                       if all the elements are not present returns false
+
+isEmpty():used to check if collection is empty
+          :returns boolean , if collection is empty returns true,
+          if collection is not empty returns false
+
+clear():used to clear all the elements from collection
+         :returns boolean , if collection is cleared returns true,
+         if collection is not cleared returns false
+
+toArray() :used to convert collection to array
+          :returns Object[] , array of objects
+          :if collection is empty returns []
+
+iterator(): used to get the iterator of collection
+            :returns Iterator , iterator of collection
+            :if collection is empty returns null
+
+spiltIterator():used to get the split iterator of collection
+                :returns SpiltIterator , split iterator of collection
+                :if collection is empty returns null
+
+forEach():used to iterate over collection
+          :returns void , it will iterate over collection
+          :if collection is empty returns null
+
+stream():used to get the stream of collection
+          :returns Stream , stream of collection
+          :if collection is empty returns null
+
+parallelStream():used to get the parallel stream of collection
+          :returns Stream , parallel stream of collection
+          :if collection is empty returns null
+
+equals():used to check if two collections are equal
+          :returns boolean , if two collections are equal returns true,
+          if two collections are not equal returns false
+
+hashCode():used to get the hash code of collection
+            :returns int , hash code of collection
+            :if collection is empty returns 0
+
+toString():used to get the string representation of collection
+            :returns String , string representation of collection
+            :if collection is empty returns ""
+
+
+
+List interface:
+---------------
+       -it is a child of collection interface , present in java.util package since java 1.2
+       -it is a collection of ordered elements(index based)
+       -it allows duplicates
+
+    
+
+add(index,e): used to add an element at a particular index position
+            :if index is out of range then it will throw IndexOutOfBoundsException
+
+addAll(index,collection):used to add multiple elements at a particular index position
+                        :if index is out of range then it will throw IndexOutOfBoundsException
+
+addFirst(e):used to add an element at the beginning of the list
+
+addLast(e):used to add an element at the end of the list
+
+get(index): used to get the element at a particular index position
+          :returns E , element at a particular index position
+          :if index is out of range then it will throw IndexOutOfBoundsException
+
+getFirst():used to get the first element of the list
+
+getLast():used to get the last element of the list
+
+indexOf(e):used to get the index of an element
+          :returns int , index of element
+          :if element is not present returns -1
+
+lastIndexOf(e):used to get the last index of an element
+          :returns int , last index of element
+          :if element is not present returns -1
+
+listIterator():used to get the list iterator of the list
+              :returns ListIterator , list iterator of the list
+              :if list is empty returns null
+
+listIterator(index):used to get the list iterator of the list at a particular index position
+                    :returns ListIterator , list iterator of the list at a particular index position
+                    :if index is out of range then it will throw IndexOutOfBoundsException
+
+remove(index):used to remove an element at a particular index position
+             :returns E , element at a particular index position
+             :if index is out of range then it will throw IndexOutOfBoundsException
+
+removeFirst():used to remove the first element of the list
+
+removeLast():used to remove the last element of the list
+
+replaceAll(collection):used to replace all the elements of the list
+
+retainAll(collection):used to retain all the elements of the list
+                     :returns boolean , if elements are retained returns true,
+                     if elements are not retained returns false
+
+reverse():used to reverse the list
+         
+set(index,e):used to set/update/replace the element at a particular index position 
+            :returns E , element at a particular index position
+            :if index is out of range then it will throw IndexOutOfBoundsException
+
+sort(comparator):used to sort the list
+
+subList(startIndex,endIndex):used to get the sub list of the list
+                            :returns List , sub list of the list
+                            :if startIndex is greater than endIndex then it will throw IndexOutOfBoundsException
+
+
+Set interface:
+--------------
+   -Set is a child interface of Collection interface present in java.util package since java 1.2
+   -Set is a collection of unique elements(won't allow duplicates)
+   -Set is a collection of unordered elements
+   -No extra methods beyond what is inherited from Collection.
+
+Feature                   	List                         	Set
+------------------------------------------------------------------------------------
+Order	          Maintains insertion order	    May or may not (depends on implementation)
+Duplicates  	  Allowed	                      Not allowed
+Indexed Access	Yes                        	  No
+Implementations	ArrayList, LinkedList	        HashSet, LinkedHashSet, TreeSet
+-----------------------------------------------------------------------------------
+
+
+Queue interface:
+---------------
+     - Queue is a child interface of Collection interface present in java.util package since java 1.2
+     - Queue is a collection of ordered elements(first in first out)
+
+offer(e):used to add an element to the queue
+         :returns boolean , if element is added returns true,
+         if element is not added returns false
+
+poll():used to remove an element from the queue
+       :returns E , element from the queue
+       :if queue is empty returns null
+
+peek():used to get the first element of the queue
+      :returns E , first element of the queue
+      :if queue is empty returns null
+
+element():used to get the first element of the queue
+          :returns E , first element of the queue
+          :if queue is empty returns NoSuchElementException
+
+remove():used to remove an element from the queue
+         :returns E , element from the queue
+         :if queue is empty returns NoSuchElementException
+
+
+Feature                 	List              	Set                	Queue
+------------------------------------------------------------------------------------------
+Duplicates Allowed	       Yes                 No                  Yes
+Maintains Order	           Yes (index)	     Depends               Yes (FIFO)
+Indexed Access	           Yes	               No	                  No
+Special Methods	       get, set etc.	      None extra	  offer, poll, peek etc.
+Main Usage	           Random access	    Unique elements	    FIFO processing
+
+
+
+
+---------------------------------------------------------------------------------------------
+Feature                     	ArrayList                              	LinkedList
+-------------------------------------------------------------------------------------------
+Structure	                   Dynamic Array                     	Doubly Linked List
+thread safe                  not thread safe                       not thread safe
+Access Speed             	    Fast (O(1))	                      Slow (O(n))
+Insert/Delete at Start	      Slow (O(n))                       Fast (O(1))
+Insert/Delete in Middle	      Slow (O(n))	                      Moderate (O(n))
+Memory Efficiency	         Better (less overhead)	             Higher (node pointers)
+                                                             Extra memory for pointers (next & prev) in each node
+Use Case	                Best for read-heavy apps	           Best for write-heavy apps
+-------------------------------------------------------------------------------------
+
+
+
+Vector:
+-------
+   -Vector is a legacy class that also implements the List interface.
+   -It is similar to ArrayList, but with one major difference:
+   -Vector is synchronized (i.e., thread-safe).
+   -Vector is slower than ArrayList. 
+   -Vector is deprecated and is replaced by ArrayList.
+   -mainly used for Multi-threaded list (without external sync)
+  
